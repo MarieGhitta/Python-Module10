@@ -29,8 +29,15 @@ def mage_stats(mages: list[dict]) -> dict:
 
 
 if __name__ == '__main__':
-    artifacts = [{'name': 'Fire Staff', 'power': 78, 'type': 'accessory'}, {'name': 'Storm Crown', 'power': 111, 'type': 'weapon'}, {'name': 'Earth Shield', 'power': 101, 'type': 'accessory'}, {'name': 'Ice Wand', 'power': 82, 'type': 'relic'}]
-    mages = [{'name': 'Kai', 'power': 69, 'element': 'earth'}, {'name': 'Alex', 'power': 90, 'element': 'ice'}, {'name': 'Morgan', 'power': 74, 'element': 'fire'}, {'name': 'River', 'power': 75, 'element': 'wind'}, {'name': 'Phoenix', 'power': 78, 'element': 'light'}]
+    artifacts = [{'name': 'Fire Staff', 'power': 78, 'type': 'accessory'},
+                 {'name': 'Storm Crown', 'power': 111, 'type': 'weapon'},
+                 {'name': 'Earth Shield', 'power': 101, 'type': 'accessory'},
+                 {'name': 'Ice Wand', 'power': 82, 'type': 'relic'}]
+    mages = [{'name': 'Kai', 'power': 69, 'element': 'earth'},
+             {'name': 'Alex', 'power': 90, 'element': 'ice'},
+             {'name': 'Morgan', 'power': 74, 'element': 'fire'},
+             {'name': 'River', 'power': 75, 'element': 'wind'},
+             {'name': 'Phoenix', 'power': 78, 'element': 'light'}]
     spells = ['earthquake', 'freeze', 'meteor', 'heal']
     print("==================================================\n")
     print("Testing artifact sorter...")

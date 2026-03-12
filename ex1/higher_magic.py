@@ -1,17 +1,20 @@
-def spell_combiner(spell1: callable, spell2: callable) -> callable:
-    def combine(value):
+from typing import Callable, Union, Any
+
+
+def spell_combiner(spell1: Callable, spell2: Callable) -> Callable:
+    def combine(value: Any) -> tuple:
         return (spell1(value), spell2(value))
     return combine
 
 
-def power_amplifier(base_spell: callable, multiplier: int) -> callable:
-    def mega_fireball(value):
+def power_amplifier(base_spell: Callable, multiplier: int) -> Callable:
+    def mega_fireball(value: int) -> int:
         return base_spell(value) * multiplier
     return mega_fireball
 
 
-def conditional_caster(condition: callable, spell: callable) -> callable:
-    def caster(x):
+def conditional_caster(condition: Callable, spell: Callable) -> Callable:
+    def caster(x: Any) -> Union[int, str]:
         if condition(x):
             return spell(x)
         else:
@@ -19,8 +22,8 @@ def conditional_caster(condition: callable, spell: callable) -> callable:
     return caster
 
 
-def spell_sequence(spells: list[callable]) -> callable:
-    def sort_spell(value):
+def spell_sequence(spells: list[Callable]) -> Callable:
+    def sort_spell(value: Any) -> Any:
         for spell in spells:
             value = spell(value)
         return value

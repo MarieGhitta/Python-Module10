@@ -1,0 +1,1 @@
+les types hint des fonctions à l'intérieur surtout ex1
